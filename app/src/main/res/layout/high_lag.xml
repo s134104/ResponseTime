@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/high_lag"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="group11.dtu.responsetime.MainActivity">
+    tools:context="group11.dtu.responsetime.HighLagTest">
 
-    <!-- <LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center_horizontal"
+        >
 
-       <Button
+
+        <Button
             android:id="@+id/button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -35,16 +38,16 @@
             android:text="Perfect"
             android:onClick="perfect" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="false"
-            android:layout_weight="0.33"
-            android:text="Too fast"
-            android:onClick="tooFast" />
+        <!-- <Button
+             android:id="@+id/button3"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="false"
+             android:layout_weight="0.33"
+             android:text="Too fast"
+             android:onClick="tooFast" /> -->
 
-    </LinearLayout>-->
+    </LinearLayout>
 
     <TextView
         android:text="TextView"
@@ -60,37 +63,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:id="@+id/instruction"
-        android:text= "Choose one of the two tests"
-        android:textSize="20dp"
-        android:layout_alignBaseline="@+id/textView4"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_centerHorizontal="true" />
+        android:text="When you click the button, the color will change. Click 'too slow' if you feel a lag before the color changes. click 'perfect' if you do not feel a lag. When you press 'too slow' it tries with another time from press to reaction. "
+        android:textSize="18dp"/>
 
     <Button
-        android:text="Random test"
+        android:text="Click here to start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/random"
-        android:onClick="random"
+        android:id="@+id/button7"
+        android:onClick="click"
         android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/textView4"
-        android:gravity="center_vertical|center_horizontal"
-
-        android:layout_alignEnd="@+id/textView4" />
-    <Button
-        android:text="Lag test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lag"
-        android:onClick="lag"
-        android:layout_below="@+id/random"
-        android:layout_alignLeft="@+id/random"
-        android:layout_alignStart="@+id/random"
-        android:layout_marginTop="56dp"
-        android:layout_gravity="center_vertical"
-        android:layout_alignRight="@+id/random"
-        android:layout_alignEnd="@+id/random"
-        android:gravity="center_vertical|center_horizontal" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
